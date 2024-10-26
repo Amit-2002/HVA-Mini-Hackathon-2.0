@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+</head>
+<body>
+    <h1>Trivia Game</h1>
+
+    <!-- Player Setup -->
+    <div id="player-setup">
+        <input type="text" id="player1" placeholder="Enter Player 1 Name">
+        <input type="text" id="player2" placeholder="Enter Player 2 Name">
+        <button id="start-game">Start Game</button>
+    </div>
+
+    <!-- Category Selection -->
+    <div id="category-selection" style="display:none;">
+        <h2>Select a Category</h2>
+        <ul id="categories"></ul>
+    </div>
+
+    <!-- Question Display -->
+    <div id="question-area" style="display:none;">
+        <h2 id="current-question"></h2>
+        <ul id="answer-options"></ul>
+    </div>
+
+    <!-- Score Display -->
+    <div id="scoreboard" style="display:none;">
+        <h2>Scores</h2>
+        <p id="score-player1"></p>
+        <p id="score-player2"></p>
+        <!-- <button id="end-game">End Game</button> -->
+        <button id="continue-game" style="display:none">Continue Game</button>
+        <button id="end-game">End Game</button>
+    </div>
+
+ 
+<!-- js file attached -->
+    <script src="app.js"></script>
+</body>
+</html>
