@@ -1,5 +1,3 @@
-
-
 let p1 = document.querySelector('#player1');
 let p2 = document.querySelector('#player2');
 let currentP;
@@ -114,7 +112,7 @@ function showQuestionWithOptionsAndValidation(allLevelQuestion) {
         document.body.append(ansDiv);
     }
 
-    // Check if the selected answer is correct.
+    // Check the selected answer is correct.
     function checkAnswer(chosenAns, rightAns) {
         if (chosenAns === rightAns) {
             if (currentP === p1.value) {
@@ -155,31 +153,29 @@ function scoresIncreament(index) {
     }
     else{
         return 25;
-    }
-    
+    }   
 }
 
-// Function to end the game (you can customize this).
+// Function to end the game
 function gameEnd() {
     document.body.innerHTML = '';
     let scoreDisplay = document.createElement('div');
-    let winnerh2 = document.createElement('h2');
-    let looserh2 = document.createElement('h2');
+    let winnerh1 = document.createElement('h1');
+    let looserh1 = document.createElement('h1');
 
     if (scores.p1 > scores.p2){
-        winnerh2.textContent = `${p1.value} score is :- ${scores.p1} so ${p1.value} is the winner..!`;
-        looserh2.textContent = `${p2.value} score is :- ${scores.p2} so ${p2.value} is the Looser..!`;
+        winnerh1.textContent = `${p1.value}'s score is :- ${scores.p1} so ${p1.value} is the winner..!`;
+        looserh1.textContent = `${p2.value}'s score is :- ${scores.p2} so ${p2.value} is the Looser..!`;
     }
     else if (scores.p2 > scores.p1){
-        winnerh2.textContent = `${p2.value} score is :- ${scores.p2} so ${p2.value} is the winner..!`;
-        looserh2.textContent = `${p1.value} score is :- ${scores.p1} so ${p1.value} is the Looser..!`;
+        winnerh1.textContent = `${p2.value}'s score is :- ${scores.p2} so ${p2.value} is the winner..!`;
+        looserh1.textContent = `${p1.value}'s score is :- ${scores.p1} so ${p1.value} is the Looser..!`;
     }
     else{
-        winnerh2.textContent = `Game Over! Player 1: ${scores.p1}, Player 2: ${scores.p2} Both Player's score are same. So match is Tie......!!`;
-
+        winnerh1.textContent = `Game Over! Player 1: ${scores.p1}, Player 2: ${scores.p2} Both Player's score are same. So match is Tie......!!`;
     }
     
-    scoreDisplay.append(winnerh2, looserh2);
+    scoreDisplay.append(winnerh1, looserh1);
     document.body.append(scoreDisplay);
 }
 
