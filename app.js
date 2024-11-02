@@ -27,7 +27,7 @@ function categories(data) {
     checkCategories = [];
 
     let categoriesDiv = document.createElement('div');
-    let categoriesHeading = document.createElement('h2');
+    let categoriesHeading = document.createElement('h1');
     categoriesHeading.textContent = "Choose Category : ";
     categoriesDiv.append(categoriesHeading);
 
@@ -83,7 +83,7 @@ function showQuestionWithOptionsAndValidation(allLevelQuestion) {
         document.body.innerHTML = '';
 
         let questionArea = document.createElement('div');
-        questionArea.innerHTML = `<p>${currentP}: ${ques.question.text}</p>`;
+        questionArea.innerHTML = `<p><i>${currentP}:</i> ${ques.question.text}</p>`;
         document.body.append(questionArea);
 
         await showAnswer(ques);
